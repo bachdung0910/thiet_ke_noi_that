@@ -1,0 +1,188 @@
+
+/* top level */
+
+#site_topnav {
+	width: 940px;
+	height: 35px;
+	clear: both;
+	list-style-type: none;
+	margin: 0px auto;
+	padding: 0;
+	position: relative;
+	z-index: 601;
+}
+
+	#site_topnav li { 
+		height: 35px;
+		float: left;
+		font-family: "times new roman";
+		font-size: 18px;
+		list-style: none;
+		margin: 0;
+		padding:0 12px 0 12px;
+		position: relative;
+		text-align: center;
+	}
+	
+		/*
+		#stn1 { width: 75px; }
+		#stn2 { width: 124px; }
+		#stn3 { width: 117px; }
+		#stn4 { width: 130px; }
+		#stn5 { width: 110px; }
+		#stn6 { width: 77px; }
+		#stn7 { width: 113px; }
+		#stn8 { width: 64px; }
+		#stn9 { width: 129px; }
+		*/
+		
+		/* #site_topnav li#stn1 { width: 65px; }
+		#site_topnav li#stn2 { width: 114px; }
+		#site_topnav li#stn3 { width: 107px; }
+		#site_topnav li#stn4 { width: 110px; }
+		#site_topnav li#stn5 { width: 90px; }
+		#site_topnav li#stn6 { width: 67px; }
+		#site_topnav li#stn7 { width: 103px; }
+		#site_topnav li#stn8 { width: 64px; }
+		#site_topnav li#stn9 { width: 119px; }
+		#site_topnav li#stn10 { width: 163px; } 
+			#site_topnav li#site_topnav #stn9 { background: none; }*/
+			
+		#site_topnav a {
+			width: 100%;
+			height: 35px;
+			display: block;
+			line-height: 35px;
+			position: relative;
+		}
+		
+		#site_topnav > li 
+		{
+			border-left: 1px solid #b79641;
+		}
+
+#site_topnav > li:first-child > a
+{
+	border-left: 0px;
+}
+			#site_topnav a:link, #site_topnav a:visited { 
+				color: #000;
+				text-decoration: none; 
+			}
+
+			#site_topnav a:hover, #site_topnav a:active { 
+				background-color: black;
+				color: #c7be71; 
+				text-decoration: none; 
+			}
+			
+				#site_topnav li#stn1 a:hover, #stn1 a:active { background-color: black; }
+				
+				#site_topnav li#stn9 a:hover, #stn9 a:active { background-color: black; }
+				
+			#site_topnav a.on-state {
+				background-color: black;
+			}
+				
+				#site_topnav li#stn1 a.on-state {background-color: black; }
+				
+				#site_topnav li#stn9 a.on-state{ background-color: black; }
+				
+				#site_topnav a.on-state:link, #site_topnav a.on-state:visited {
+					color: #c7be71; 
+				}
+				
+/* subs */
+
+				#site_topnav li .sub {
+					width: 230px;
+					background: #000000;
+					border-top: none;
+					border-bottom: 1px solid #ccb56f;
+					border-left: 1px solid #ccb56f;
+					border-right: 1px solid #ccb56f;
+					display: none;
+					float: left;
+					font-size: 0.8em;
+					margin: 0 -1px;
+					padding: 0 10px;
+					position: absolute; /*--Important--*/
+						left: 0;
+						top: 35px; 
+						z-index: 999;
+				}
+					
+					#site_topnav li .sub ul { 
+						width: 230px; 
+						height: auto; 
+						border: none; 
+						float: left; 
+						margin: 0;
+						padding: 5px 0 0 0;
+					}
+						
+						#site_topnav li .sub li {
+							width: 230px;
+							height: auto;
+							background: none;
+							border: none;
+							color: #fff;
+							float: none;
+							margin: 0;
+							padding: 1px 0;
+							text-align: left;
+							text-transform: none;
+						}
+						
+						#site_topnav li .sub li.last-sub-li {
+							background: none;
+						}
+						
+						#site_topnav li#stn-1 .sub ul li a,
+						#site_topnav li#stn-2 .sub ul li a,
+						#site_topnav li#stn-3 .sub ul li a,
+						#site_topnav li#stn-4 .sub ul li a, 
+						#site_topnav li#stn-5 .sub ul li a,
+						#site_topnav li#stn-6 .sub ul li a {
+							display: block;
+							width: 230px;
+							padding: 0;
+						}
+							
+							#site_topnav li .sub li a, #site_topnav li.stn-li-on div.sub ul li a { font-weight: normal; }
+							#site_topnav li .sub li a:link, #site_topnav li .sub li a:visited { display: inline; color: #fff; text-decoration: none; padding: 0; margin: 0; }
+							#site_topnav li .sub li a:hover, #site_topnav li .sub li a:active { text-decoration: underline; background: transparent; }
+							
+/* subtabs */
+
+#site_topnav .sub .subtab { width: 178px; }
+#stn-8 .sub .subtab { border-right: 0; }
+
+/*
+	what is this I don't even 
+	#stn-1 .sub .subtab { left: 0; }
+	#stn-2 .sub .subtab { left: 110px; }
+	#stn-3 .sub .subtab { left: 221px; }
+	#stn-4 .sub .subtab { left: 356px; }
+	#stn-5 .sub .subtab { left: 459px; }
+	#stn-6 .sub .subtab { left: 644px; }
+*/
+
+#site_topnav li .sub .subtab {
+	position: relative;
+	height: 20px;
+	width: 180px;
+	background: #ef2933;
+	height: 9px;
+	top: -9px;
+} /* put <div class="subtab">&nbsp;</div> above UL to use this */
+
+
+#site_topnav > li:active, #site_topnav > li:hover {
+	background-color: #000;
+}
+
+.ahover {
+	color: #c7be71!important;
+}
+

@@ -1,0 +1,205 @@
+
+#brokerage_page {
+	width: 940px;
+	padding: 20px 0;
+}
+
+	#brokerage_lhs {
+		width: 140px;
+		float: left;
+	}
+	
+		#brokerage_lhs h3 {
+			font-family: Arial;
+			color: #c7be71;
+			font-size: 0.9em;
+			margin-bottom: 10px;
+			padding: 6px;
+			background: #dddddd url(../images/bg_lhsnav_slidedown.gif) no-repeat left top;
+			border-bottom-left-radius: 0.35em;
+			-moz-border-radius-bottomleft: 0.35em;
+			-webkit-border-bottom-left-radius: 0.35em;
+			border-bottom-right-radius: 0.35em;
+			-moz-border-radius-bottomright: 0.35em;
+			-webkit-border-bottom-right-radius: 0.35em;
+		}
+			
+		.lhsnav_slidedown {
+			width: 140px;
+			background: #dddddd url(../images/bg_lhsnav_slidedown.gif) no-repeat left top;
+			border: none;			
+				border-bottom-left-radius: 0.35em;
+				-moz-border-radius-bottomleft: 0.35em;
+				-webkit-border-bottom-left-radius: 0.35em;
+				border-bottom-right-radius: 0.35em;
+				-moz-border-radius-bottomright: 0.35em;
+				-webkit-border-bottom-right-radius: 0.35em;
+			font-family: Arial;
+			font-size: 0.8em;
+			margin: 0 0 15px 0;
+		}
+		
+			.lhsnav_slidedown strong {
+				width: 116px;
+				height: 32px;
+				display: block;
+				color: #c7be71;
+				font-size: 1.0em;
+				line-height: 32px;
+				padding: 0 0 0 24px;
+			}
+			
+				.slidedown_open strong { background: transparent url(../images/bg_lhsnav_slidedown_1.gif) no-repeat left center; }
+				.slidedown_shut strong { background: transparent url(../images/bg_lhsnav_slidedown_0.gif) no-repeat left center; }
+			
+			.lhsnav_slidedown ul {
+				width: 140px;
+				list-style: none;
+				margin: 0;
+				padding: 0 0 10px 0;
+			}
+			
+				.lhsnav_slidedown ul li {
+					width: 110px;
+					background: transparent url(../images/lhsnav_slidedown_li_0.gif) no-repeat 9px 1px;
+					font-size: 0.9em;
+					list-style-type: none;
+					margin: 10px 0 0 0;
+					padding: 0 0 0 30px;
+				}
+				
+					.lhsnav_slidedown a:link, .lhsnav_slidedown a:visited { color: #000; text-decoration: none; }
+					.lhsnav_slidedown a:hover, .lhsnav_slidedown a:active { color: #000; text-decoration: underline; }
+					
+					.lhsnav_slidedown ul li.filter_active {
+						/* font-weight: bold; */
+						/* font-size: 0.9em; */
+						background: transparent url(../images/lhsnav_slidedown_li_1.gif) no-repeat 9px 1px;
+					}
+					
+					.tagcount
+					{
+						color: #777;
+					}
+	
+	#brokerage_rhs {
+		width: 780px;
+		float: right;
+	}
+	
+		#brok_title_sort {
+			width: 780px;
+			height: 64px;
+			/* background: transparent url(../images/bg_brokerage_rhs.gif) no-repeat left top; */
+			background: #ffffff;
+			font-family: "times new roman";
+			font-size: 0.8em;
+			padding: 0;
+		}
+		
+			#brok_title {
+				/* color: #c7be71; */
+				/* font-size: 1.2em; */
+				line-height: 32px; 
+				color: #000000;
+				font-family: "times new roman";
+				font-size: 1.8em;
+				font-weight: normal;
+			}
+		
+			#brok_sort {
+				color: #666;
+				float: right;
+				font-family: arial,verdana,"Bitstream Vera Sans",geneva,helvetica,helve,sans-serif;
+				line-height: 32px;
+			}
+			
+				#brok_sort a {
+					color: #666;
+					text-decoration: underline;
+				}
+			
+		#brok_text {
+			font-size: 0.9em;
+			padding: 15px 0;
+		}
+		
+	
+		#brok_text_two {
+			width: 100%;
+			border-top: 1px solid #dddddd;
+			color: #666;
+			font-size: 0.8em;
+			margin: 20px 0 10px 0;
+			padding: 5px 0;
+		}
+		
+			#brok_text_two h2 {
+				font-size: 1.2em;
+				margin: 15px 0 5px 0;
+			}
+		
+		#brok_prods {
+			width: 795px;
+			overflow: hidden;
+			margin: 5px 0 0 0;
+		}
+		
+			.brok_prod_cell {
+				width: 240px;
+				height: 300px;
+				overflow: hidden;
+				background-color: #dddddd;
+				border: 0;
+					border-radius: 0.35em;
+					-moz-border-radius: 0.35em;
+					-webkit-border-radius: 0.35em;
+				color: #666;
+				float: left;
+				font-size: 0.8em;
+				margin: 0 15px 20px 0; 
+				padding: 5px;
+				position: relative;
+					z-index: 1;
+			}
+			
+			.brok_prod_cell_end { margin-right: 0; }
+			
+				.brok_prod_cell .images-overlay {
+					width: 161px;
+					height: 161px;
+					position: absolute;
+						right: 0;
+						top: 0;
+						z-index: 999;
+				}
+			
+				.brok_prod_cell_img {
+					position: relative;
+					z-index: 1;
+				}
+			
+				.brok_prod_dets {
+					width: 240px;
+					padding: 10px 0 0 0;	
+					position: relative;
+					z-index: 1;
+				}
+				
+					.brok_prod_title {
+						width: 240px;
+						float: left;
+						font-family: "times new roman";
+						font-size: 1.3em;
+					}
+					
+						.brok_prod_title a:link, .brok_prod_title a:visited { color: #000; text-decoration: none; }
+						.brok_prod_title a:hover, .brok_prod_title a:active { color: #000; text-decoration: underline; }
+					
+					.brok_prod_price {
+						width: 80px;
+						float: right;
+						text-align: right;
+					}
+					
+					.brok_prod_dets p { margin: 4px 0; }

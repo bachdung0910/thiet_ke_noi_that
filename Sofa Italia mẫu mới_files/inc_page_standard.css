@@ -1,0 +1,190 @@
+
+#standard_page {
+	width: 940px;
+	padding: 20px 0;
+}
+
+	#standard_lhs {
+		width: 140px;
+		background-color: #dddddd;
+		border: none;			
+			border-bottom-left-radius: 0.35em;
+			-moz-border-radius-bottomleft: 0.35em;
+			-webkit-border-bottom-left-radius: 0.35em;
+			border-bottom-right-radius: 0.35em;
+			-moz-border-radius-bottomright: 0.35em;
+			-webkit-border-bottom-right-radius: 0.35em;
+		float: left;
+		font-size: 0.9em;
+		list-style: none;
+		margin: 0;
+		padding: 0 0 10px 0;
+	}
+			
+		#standard_lhs li {
+			width: 126px;
+			font-family: Arial;
+			list-style-type: none;
+			margin: 0;
+			padding: 3px 7px;
+		}
+		
+			#standard_lhs li.header {
+				background: #000 url(../images/bg_lhsnav_slidedown.gif) no-repeat left top;
+				display: block;
+				color: #c7be71;
+				font-weight: bold;
+				line-height: 32px;
+				padding: 0 7px;
+				font-size: 0.9em;
+				font-weight: bold;
+				margin: 0 0 15px 0;
+			}
+			
+			#standard_lhs li.active { font-weight: bold; }
+				
+			#standard_lhs a:link, #standard_lhs a:visited { color: #000; text-decoration: none; font-size: 0.9em; }
+			#standard_lhs a:hover, #standard_lhs a:active { color: #000; text-decoration: underline; }
+	
+	#standard_rhs {
+		width: 780px;
+		float: right;
+		color: #666;
+		font-size: 0.9em;
+		line-height: 1.3em;
+	}
+	
+		#standard_rhs h1{
+			font-size: 1.8em;
+			font-family: "times new roman";
+			color: #000;
+			font-weight: normal;
+			margin: 15px 0 0 0;
+		}
+		
+		#standard_rhs h2{
+			font-size: 1.1em;
+			color: #000;
+			padding: 30px 0 0 0;
+			margin: 0;
+			font-weight: normal
+		}
+		
+		#standard_rhs a:link, #standard_rhs a:visited { color: #555; text-decoration: underline; }
+		#standard_rhs a:hover, #standard_rhs a:active { color: #666; text-decoration: underline; }
+		
+	#standard_full {
+		width: 940px;
+		/* float: right; */ /* WHY FLOAT RIGHT - ITS FULL WIDTH. FULL. AS IN NOT LESS THAN FULL. AS IN THERE ARE NO GAPS EITHER SIDE. */
+		color: #666;
+		font-size: 0.9em;
+		line-height: 1.3em;
+	}
+	
+		#standard_full h1 {
+			font-size: 1.8em;
+			font-family: "times new roman";
+			color: #000;
+			font-weight: normal;
+			margin: 15px 0 0 0;
+		}
+		
+		#standard_full h2 {
+			font-size: 1.1em;
+			color: #000;
+			padding: 30px 0 0 0;
+			margin: 0;
+			font-weight: normal
+		}
+		
+		#standard_full a:link, #standard_full a:visited { color: #555; text-decoration: underline; }
+		#standard_full a:hover, #standard_full a:active { color: #666; text-decoration: underline; }		
+		
+		#finance-box {
+			width: 888px;
+			border: 1px solid #CCC; 
+			padding: 20px;
+			margin: 20px 10px 40px 10px;
+			outline: 10px solid #ECECEC;
+		}
+		
+			#finance-box h2 {
+				margin-top: 0;
+				padding-top: 0;
+			}
+		
+/**** STORE LOCATOR ****/
+
+#store_locator { 
+	background: #eeeeee url(../images/bg_store_locator.gif) no-repeat center center;
+	width: 740px;
+	height: 55px;	
+	line-height: 55px;
+	padding: 0px 20px;
+	margin: 10px 0px;
+}
+ 
+	#store_locator p { 
+		float: left;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	#store_locator #butt-findstore {
+		padding: 10px 0px;	
+		float: right;
+	}
+	
+	#store_locator #mylocation {
+		float: right;	
+		margin: 10px 20px 10px 0px;	
+		font-size: 24px;
+		line-height: 24px;
+		height: 28px;
+		width: 120px;
+		color: #ceb771;
+		padding: 0px 7px;
+	}
+	
+#storeresults p {
+	float: left; 
+	width: 50%;	
+}
+
+/*** FINANCE PAGE ***/
+
+#finance_lft {
+	width: 620px;
+	float: left;
+}
+
+#finance_rgt {
+	width: 290px;
+	float: right;
+	padding: 0px 5px;
+}
+
+	#finance_lft h2, #finance_rgt h2 {
+		color: #812021;
+		font-family: "times new roman";
+		font-size: 1.7em;
+		font-weight: normal;
+		line-height: 1.3em;
+	}
+	
+	#finance_lft_lft {
+		width: 290px;
+		float: left;
+	}
+	
+	#finance_lft_rgt {
+		width: 290px;
+		float: right;
+		margin-right: 8px;
+	}
+	
+	#finance_rgt strong.cta {
+		color: #7b1a1a;
+		font-size: 1.4em;
+		font-weight: normal;
+	}	

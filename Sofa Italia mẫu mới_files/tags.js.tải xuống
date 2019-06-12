@@ -1,0 +1,79 @@
+function recountVisible(firstRun) {
+	$(".slidedown_ul li").each(function() {			
+		// REMOVE ANY EXISTING ONES
+		$("span.tagcount",this).remove();
+
+		// FIND THE LINK
+		theA = $("a",this);
+		
+		// GET THE CLASS
+		theTagClass = "." + $(theA).attr("href").replace(/#/,"");
+		//alert(theTagClass);
+		
+		// COUNT THE NUMBER OF VISIBLE PRODUCTS WITH THIS TAG
+		numProducts = $(theTagClass + ":visible").length;
+		
+		// IF NUMPRODUCTS = 0 AND FIRST RUN, NEEDS TO BE REMOVED FROM NAV
+		if (numProducts == 0 && firstRun) {
+			$(this).remove();
+		} else {
+			// ADD THE NEW ONE
+			$("<span class='tagcount'>&nbsp;(" + numProducts + ")</span>").insertAfter(theA);
+		}
+	});
+}
+	
+$(document).ready(function() {
+	recountVisible(true);
+	
+	$(".slidedown_shut .slidedown_ul").hide();
+	$(".lhsnav_slidedown strong").click(function() {
+		$(this).next(".slidedown_ul").slideToggle(600);
+		if ($(this).parent().hasClass("slidedown_open")) {
+			$(this).parent().removeClass("slidedown_open")
+			$(this).parent().addClass("slidedown_shut")
+		} else {
+			$(this).parent().removeClass("slidedown_shut")
+			$(this).parent().addClass("slidedown_open")
+		}
+	});
+  
+	$(".slidedown_ul li").click(function() {
+		goodTags = "";
+		badTags  = "";
+  
+		theTagClass = "." + $("a",this).attr("href").replace(/#/,"");
+	
+		if ($(this).hasClass("filter_active")) {
+			$(this).removeClass("filter_active");
+		} else {
+			$(this).addClass("filter_active");
+		}
+		
+		// GOOD TAGS
+		$("#brokerage_lhs .slidedown_ul li.filter_active").each(function() {
+			theTagClass = "." + $("a",this).attr("href").replace(/#/,"");
+			goodTags += ", " + theTagClass;			
+		});
+		
+		// NOW TRIM THE OPENING COMMA-SPACE OFF THOSE STRINGS
+		goodTags = goodTags.substring(2);
+		
+		// DEBUG
+		//alert(goodTags);
+		
+		if (goodTags > "") {
+			// SHOW THE GOOD ONES
+			$(goodTags + ":hidden").fadeIn("slow");
+			
+			// HIDE THE BAD ONES
+			$(".brok_prod_cell:not(" + goodTags + "):visible").fadeOut("slow");
+		} else {
+			// SHOW EVERYTHING
+			$(".brok_prod_cell:hidden").fadeIn("slow");
+		}
+		
+		setTimeout("recountVisible(false)",750);		
+		return false;
+	});  
+});

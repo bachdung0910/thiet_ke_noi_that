@@ -1,0 +1,17 @@
+$(function() {
+    
+    $('#list-full').click(function(){
+        $.cookie('list', null, { path: '/', expires: 1 });
+        location.reload();
+    });
+    
+    $('#list-icon').click(function(){
+        $.cookie('list', 'icon', { path: '/', expires: 1 });
+        location.reload();
+    });
+    
+    $('#list-order').change(function(){
+        $.cookie('order', $(this).val(), { path: '/', expires: 1 });
+        location.reload();
+    });
+});

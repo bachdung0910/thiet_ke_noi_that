@@ -1,0 +1,146 @@
+$(document).ready(function(){
+	//global vars
+	var form = $("#wb_form");
+	var name = $("#name");
+	var nameInfo = $("#nameInfo");
+	var email = $("#email");
+	var emailInfo = $("#emailInfo");
+	var phone = $("#phone");
+	var phoneInfo = $("#phoneInfo");
+	var add = $("#add");
+	var title = $("#title");
+	var titleInfo = $("#titleInfo");
+	var mess = $("#mess");
+	
+	//On blur
+	name.blur(validateName);
+	email.blur(validateEmail);
+	phone.blur(validatePhone);
+	add.blur(validateAdd);
+	title.blur(validateTitle);
+	mess.blur(validateMess);
+	//On key press
+	name.keyup(validateName);
+	email.keyup(validateEmail);
+	phone.keyup(validatePhone);
+	add.keyup(validateAdd);
+	title.keyup(validateTitle);
+	mess.keyup(validateMess);
+	//On Submitting
+	form.submit(function(){
+		if(validateName() & validatePhone() & validateEmail() & validateAdd() & validateTitle() & validateMess())
+			return true
+		else
+			return false;
+	});
+	
+	//validation functions
+	function validateEmail(){
+		//testing regular expression
+		var filter = /^[a-zA-Z0-9]+[a-zA-Z0-9_.-]+[a-zA-Z0-9_-]+@[a-zA-Z0-9]+[a-zA-Z0-9.-]+[a-zA-Z0-9]+.[a-z]{2,4}$/;
+		//if it's valid email
+		if(filter.test(email.val())){
+			email.removeClass("error");
+			emailInfo.text("");
+			emailInfo.removeClass("Infoerror");
+			return true;
+		}
+		//if it's NOT valid
+		else{
+			email.addClass("error");
+			emailInfo.text("Nhập đúng định dạng Email!");
+			emailInfo.addClass("Infoerror");
+			return false;
+		}
+	}
+	function validateName(){
+		//if it's NOT valid
+		var filter = /[0-9_-]|@|#|%|&/;
+		if(name.val().length < 5){
+			name.addClass("error");
+			nameInfo.text("Tên phải lớn hơn 4 ký tự!");
+			nameInfo.addClass("Infoerror");
+			return false;
+		}
+        else if(filter.test(name.val())){
+			name.addClass("error");
+			nameInfo.text("Tên chỉ gồm: Chữ");
+			nameInfo.addClass("Infoerror");
+            return false;
+        }
+		//if it's valid
+		else{
+			name.removeClass("error");
+			nameInfo.text("");
+			nameInfo.removeClass("Infoerror");
+			return true;
+		}
+	}
+	function validatePhone(){
+		//if it's NOT valid
+		var filter = /[0-9]+?/;
+		if(phone.val().length < 9){
+			phone.addClass("error");
+			phoneInfo.text("Điện thoại phải đủ số!");
+			phoneInfo.addClass("Infoerror");
+			return false;
+		}
+        else if(filter.test(phone.val())){
+			phone.removeClass("error");
+			phoneInfo.text("");
+			phoneInfo.removeClass("Infoerror");
+			return true;
+        }
+		//if it's valid
+		else{
+			phone.addClass("error");
+			phoneInfo.text("Điện thoại chỉ gồm số!");
+			phoneInfo.addClass("Infoerror");
+            return false;
+		}
+	}
+    
+    function validateAdd(){
+        var filter = /[<>]/;
+		if( filter.test(add.val()) | add.val().length < 9){
+			add.addClass("error");
+			return false;
+		}
+		//are valid
+		else{
+			add.removeClass("error");
+			return true;
+		}
+	}
+    
+    function validateMess(){
+        if(mess.val() != null){
+            var filter = /[<>]/;
+    		if( filter.test(mess.val()) | mess.val().length < 9){
+    			mess.addClass("error");
+    			return false;
+    		}
+    		//are valid
+    		else{
+    			mess.removeClass("error");
+    			return true;
+    		}
+        }
+	}
+	function validateTitle(){
+        if(title.val() != null){
+    		if(title.val().length < 9){
+    			title.addClass("error");
+    			titleInfo.text("Tiêu đề phải lớn hơn 9 ký tự!");
+    			titleInfo.addClass("Infoerror");
+    			return false;
+    		}
+    		else{
+    			title.removeClass("error");
+    			titleInfo.text("");
+    			titleInfo.removeClass("Infoerror");
+    			return true;
+    		}
+        }
+	}
+});
